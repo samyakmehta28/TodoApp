@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <title>TodoList App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'todolist/mystyle.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="container-fluid" id="wrapper">
+			<div class="row">
+				<div class="col-lg-4" id="content">
+					<h1>Today's To Do List!</h1>
+					
+					<form action="#" method="POST" role="form">
+					
+						<div class="form-group">
+							<div class="input-group">
+							  <input type="text" class="form-control" placeholder="Enter todo e.g. Grocery shopping" aria-label="Todo" aria-describedby="add-btn">
+							  <span class="input-group-btn">
+								  <button type="submit" class="btn btn-default" id="add-btn">ADD</button>
+							  </span>
+							</div>
+						</div>
+					</form>
+
+					<div class="row two_btn">
+						<div class="col-lg-12">
+							<div class="btn-toolbar">
+								<div class="btn-group">
+									<button type="button" class="btn btn-warning">REMOVE COMPLETED
+									</button>
+								</div>
+								<div class="btn-group">
+									<button type="button" class="btn btn-danger"> REMOVE ALL
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<ul class="list-group ToDoList">
+						<li class="list-group-item">Coding practice.</li>
+						<li class="list-group-item todo-completed">Buy a candy.</li>
+						<li class="list-group-item">Book tickets for movies.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
